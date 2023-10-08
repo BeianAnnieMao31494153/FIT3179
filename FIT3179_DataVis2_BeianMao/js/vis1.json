@@ -25,10 +25,6 @@
           "Renewable energy share in the total final energy consumption (%)"
         ]
       }
-    },
-    {
-      "calculate": "datum.Active + 0.1",
-      "as": "Renewable"
     }
   ],
   "mark": {
@@ -37,7 +33,12 @@
   "encoding": {
     "color": {
       "field": "Renewable energy share in the total final energy consumption (%)",
-      "type": "quantitative"
+      "title": "Renewable Energy Share (%)",
+      "type": "quantitative",
+      "scale": {
+        "type": "threshold",
+        "domain": [20, 40, 60, 80],
+        "range": ["#e6f6b9", "#aedfb6", "#68c4be", "#2165ab", "#1d3185"] }
     },
     "tooltip": [
       {
@@ -47,7 +48,8 @@
       },
       {
         "field": "Renewable energy share in the total final energy consumption (%)",
-        "type": "quantitative"
+        "type": "quantitative",
+        "title": "Renewable energy share (%)"
       }
     ]
   }
