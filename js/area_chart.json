@@ -4,7 +4,7 @@
     "width": 500,
     "title": "Renewable Energy in Australia",
     "data": {
-        "url": "../data/australia_energy_data.csv"
+        "url": "https://raw.githubusercontent.com/BeianAnnieMao31494153/FIT3179/main/data/australia_energy_data.csv"
     },
     "mark": {
         "type": "area",

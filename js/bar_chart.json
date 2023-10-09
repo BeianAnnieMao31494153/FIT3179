@@ -4,7 +4,7 @@
     "width": 500,
     "title": "Australia Energy Sources",
     "data": {
-        "url": "../data/australia_electricity_source.csv"
+        "url": "https://raw.githubusercontent.com/BeianAnnieMao31494153/FIT3179/main/data/australia_electricity_source.csv"
     },
     "mark": {"type": "bar", "cornerRadiusEnd": 4},
     "encoding": {

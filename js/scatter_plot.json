@@ -4,7 +4,7 @@
     "width": 500,
     "title": "Which countries are responsible?",
     "data": {
-        "url": "../data/global-data-on-sustainable-energy-2019.csv"
+        "url": "https://raw.githubusercontent.com/BeianAnnieMao31494153/FIT3179/main/data/global-data-on-sustainable-energy-2019.csv"
     },
     "layer": [
         {
