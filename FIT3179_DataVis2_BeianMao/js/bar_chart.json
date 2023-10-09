@@ -1,0 +1,28 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height": 500,
+    "width": 500,
+    "title": "Australia Energy Sources",
+    "data": {
+        "url": "../data/australia_electricity_source.csv"
+    },
+    "mark": {"type": "bar", "cornerRadiusEnd": 4},
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "ordinal",
+            "title": "Year"
+        },
+        "y": {
+            "field": "Electricity Generation (TWh)",
+            "type": "quantitative"
+        },
+        "xOffset": {
+            "field": "Electricity Source"
+        },
+        "color": {
+            "field": "Electricity Source",
+            "scale": {"range": ["#e6f6b9", "#aedfb6"]}
+        }
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height": 500,
+    "width": 500,
+    "title": "Which countries are responsible?",
+    "data": {
+        "url": "../data/global-data-on-sustainable-energy-2019.csv"
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "circle",
+                "size": 100
+            },
+            "encoding": {
+                "y": {
+                    "field": "Value_co2_emissions_kt_by_country",
+                    "type": "quantitative",
+                    "title": "CO2 Emissions per capita (metric tons)"
+                },
+                "x": {
+                    "field": "Primary energy consumption per capita (kWh/person)",
+                    "type": "quantitative",
+                    "title": "Energy consumption per capita (kWh)"
+                },
+                "color": {
+                    "field": "gdp_per_capita",
+                    "type": "quantitative",
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [
+                            10000
+                        ],
+                        "range": [
+                            "#68c4be",
+                            "#2165ab"
+                        ]
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Entity",
+                        "type": "nominal",
+                        "title": "Entity"
+                    },
+                    {
+                        "field": "Value_co2_emissions_kt_by_country",
+                        "type": "quantitative",
+                        "title": "CO2 Emissions per capita (metric tons)"
+                    },
+                    {
+                        "field": "Primary energy consumption per capita (kWh/person)",
+                        "type": "quantitative",
+                        "title": "Energy consumption per capita (kWh)"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": -12,
+                "fontSize": 11.5,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "text": {
+                    "field": "Entity",
+                    "type": "nominal"
+                },
+                "color": {
+                    "value": "black"
+                },
+                "opacity": {
+                    "condition": {
+                        "test": "datum['Entity'] == 'China' || datum['Entity'] == 'United States' || datum['Entity'] == 'India'",
+                        "value": 1
+                    },
+                    "value": 0
+                },
+                "tooltip": [
+                    {
+                        "field": "Entity",
+                        "type": "nominal",
+                        "title": "Entity"
+                    },
+                    {
+                        "field": "Value_co2_emissions_kt_by_country",
+                        "type": "quantitative",
+                        "title": "CO2 Emissions per capita (metric tons)"
+                    },
+                    {
+                        "field": "Primary energy consumption per capita (kWh/person)",
+                        "type": "quantitative",
+                        "title": "Energy consumption per capita (kWh)"
+                    }
+                ]
+            }
+        }
+    ]
+}
