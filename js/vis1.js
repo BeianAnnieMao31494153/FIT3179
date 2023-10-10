@@ -7,7 +7,7 @@ let vg_1 = {
       "type": "equalEarth"
     },
     "data": {
-      "url": "./js/ne_110m.json",
+      "url": "https://raw.githubusercontent.com/BeianAnnieMao31494153/FIT3179/main/js/ne_110m.json",
       "format": {
         "type": "topojson",
         "feature": "ne_110m_admin_0_countries"
@@ -18,7 +18,7 @@ let vg_1 = {
         "lookup": "properties.NAME",
         "from": {
           "data": {
-            "url": "../data/global-data-on-sustainable-energy-2019.csv"
+            "url": "https://raw.githubusercontent.com/BeianAnnieMao31494153/FIT3179/main/data/global-data-on-sustainable-energy-2019.csv"
           },
           "key": "Entity",
           "fields": [
