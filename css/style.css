@@ -4,6 +4,13 @@ h1 {
     font-size: 100px;
 }
 
+h2 {
+    font-family: 'Ubuntu';
+    color: white;
+    font-size: 50px;
+    position: "center";
+}
+
 p {
     font-family: 'Ubuntu';
 }

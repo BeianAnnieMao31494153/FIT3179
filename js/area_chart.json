@@ -32,11 +32,15 @@
       "encoding": {
         "x": {
           "field": "Year",
-          "type": "temporal"
+          "type": "temporal",
+          "title": "",
+          "axis": {"grid": false}
         },
         "y": {
           "field": "Renewables (% equivalent primary energy)",
-          "type": "quantitative"
+          "type": "quantitative",
+          "title": "Renewables mix (%)",
+          "axis": {"grid": false}
         }
       }
     }
