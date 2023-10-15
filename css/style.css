@@ -6,14 +6,33 @@ h1 {
 
 h2 {
     font-family: 'Ubuntu';
-    color: white;
+    color: black;
     font-size: 50px;
-    position: "center";
 }
 
 p {
     font-family: 'Ubuntu';
 }
+
+.colour-text {
+    color: #68c4be; 
+}
+
+#light-text {
+    color: white;
+    text-align: center;
+}
+
+.LEDC-text {
+    color: #e6f6b9;
+}
+
+.MEDC-text {
+    color: #aedfb6;
+}
+
+
+
 
 
 /*ID SELECT & CLASS SELECTOR - SEE WK5 PAGE 4*/

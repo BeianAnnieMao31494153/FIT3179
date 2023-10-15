@@ -1,8 +1,8 @@
 let vg_1 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Renewable Energy Share per country",
-    "width": 600,
-    "height": 300,
+    "width": 700,
+    "height": 400,
     "projection": {
       "type": "equalEarth"
     },
@@ -28,7 +28,8 @@ let vg_1 = {
       }
     ],
     "mark": {
-      "type": "geoshape"
+      "type": "geoshape",
+      "stroke": "lightgray"
     },
     "encoding": {
       "color": {
@@ -44,7 +45,7 @@ let vg_1 = {
         {
           "field": "properties.NAME",
           "type": "nominal",
-          "title": "Entity"
+          "title": "Country"
         },
         {
           "field": "Renewable energy share in the total final energy consumption (%)",
@@ -55,6 +56,6 @@ let vg_1 = {
     }
   }
 
-vegaEmbed("#map_chart", vg_1).then(function (result) {
+vegaEmbed("#map_chart", vg_1, { "actions": false }).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);

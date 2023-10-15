@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Renewable Energy Share per country",
-  "width": 600,
-  "height": 300,
+  "width": 700,
+  "height": 400,
   "projection": {
     "type": "equalEarth"
   },
@@ -22,32 +22,33 @@
         },
         "key": "Entity",
         "fields": [
-          "Renewables (% equivalent primary energy)"
+          "Renewable energy share in the total final energy consumption (%)"
         ]
       }
     }
   ],
   "mark": {
-    "type": "geoshape"
+    "type": "geoshape",
+    "stroke": "lightgray"
   },
   "encoding": {
     "color": {
-      "field": "Renewables (% equivalent primary energy)",
+      "field": "Renewable energy share in the total final energy consumption (%)",
       "title": "Renewable Energy Share (%)",
       "type": "quantitative",
       "scale": {
         "type": "threshold",
-        "domain": [5, 20, 35, 50],
+        "domain": [20, 40, 60, 80],
         "range": ["#e6f6b9", "#aedfb6", "#68c4be", "#2165ab", "#1d3185"] }
     },
     "tooltip": [
       {
         "field": "properties.NAME",
         "type": "nominal",
-        "title": "Entity"
+        "title": "Country"
       },
       {
-        "field": "Renewables (% equivalent primary energy)",
+        "field": "Renewable energy share in the total final energy consumption (%)",
         "type": "quantitative",
         "title": "Renewable energy share (%)"
       }

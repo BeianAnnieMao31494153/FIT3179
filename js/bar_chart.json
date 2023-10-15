@@ -1,21 +1,29 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "height": 500,
-    "width": 500,
     "title": "Australia Energy Sources",
+    "width": 200,
     "data": {
         "url": "https://raw.githubusercontent.com/BeianAnnieMao31494153/FIT3179/main/data/australia_electricity_source.csv"
+    },
+    "selection": {
+        "source_highlight": {
+            "type": "multi",
+            "fields": ["Electricity Source"],
+            "bind": "legend"
+        }
     },
     "mark": {"type": "bar", "cornerRadiusEnd": 4},
     "encoding": {
         "x": {
             "field": "Year",
             "type": "ordinal",
-            "title": "Year"
+            "title": "Year",
+            "axis": {"grid": false, "domain": false}
         },
         "y": {
             "field": "Electricity Generation (TWh)",
-            "type": "quantitative"
+            "type": "quantitative",
+            "axis": {"grid": false, "domain": false, "ticks": false}
         },
         "xOffset": {
             "field": "Electricity Source"
@@ -23,6 +31,27 @@
         "color": {
             "field": "Electricity Source",
             "scale": {"range": ["#e6f6b9", "#aedfb6"]}
-        }
-    }
+        },
+        "opacity": {
+            "condition": {"selection": "source_highlight", "value": 0.6},
+            "value": 0.2
+        },
+        "tooltip": [
+            {
+                "field": "Year",
+                "type": "nominal"
+            },
+            {
+                "field": "Electricity Generation (TWh)",
+                "type": "quantitative",
+                "title": "Generation (TWh)",
+                "format": ".0f"
+            },
+            {
+                "field": "Electricity Source",
+                "type": "nominal"
+            }
+        ]
+    },
+    "config": {"view": {"stroke": null}}
 }

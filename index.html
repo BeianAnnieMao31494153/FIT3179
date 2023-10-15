@@ -27,59 +27,104 @@
 <body>
     
     <div id="banner" , class="pure-u-1">
-        <img src="banner.jpeg" />
+        <img src="banner.jpeg", height="500" />
         <div class="title-container">
             <h1 style="font-size: 70px">Net Zero by 2050</h1>
         </div>
     </div>
 
-    <div class="pure-g">
-        <div class="pure-u-1-2">
-            <p class="text-container">
-                To keep global warming to no more than 1.5°C 
-                emissions need to be reduced by 45% by 2030 and reach net zero by 2050.
-                But how close are we in reaching our net zero commitments?
-                The NZE (Net Zero Emissions) Goal made by the United Nations in the 2015 Paris Agreement 
-                requires countries to work together to enable a worldwide transition away 
-                from fossil fuels to renewables for energy.
-            </p>
+    <div class="page">
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <p class="text-container">
+                    To keep global warming to <b>no more than 1.5°C </b>
+                    emissions need to be reduced by 45% by 2030 and reach net zero by 2050.
+                    But how close are we in reaching our net zero commitments?
+                    The <a href="https://www.un.org/en/climatechange/paris-agreement"> <b>NZE (Net Zero Emissions) Goal 
+                    </b></a> made by the <b>United Nations</b> in the <b>2015 Paris Agreement</b> 
+                    legally requires countries to work together to enable a worldwide transition away 
+                    from fossil fuels to renewables for energy. But is the world on track to reach our NZE Goal by 2050? 
+                </p>
+            </div>
+            <div class="pure-u-1-2">
+                <p class="text-container">
+                    The world map below shows the share of primary energy from each country that is derived from <b>renewable energy</b>. 
+                    Most countries still generate less than half their energy using renewables, which is concerning as the adoption of renewables 
+                    will need to significantly increase in order to reach NZE by 2050. Countries in <span class="colour-text">Africa</span>, 
+                    <span class="colour-text">Northern Europe</span> 
+                    and <span class="colour-text">South America</span> are leading the way with the highest share of renewables in their energhy mix.
+                </p>
+            </div>
         </div>
-        <div id="map_chart" , class="pure-u-1-2">
+
+        <div id="map_chart", class="pure-u-1">
             <script src="js/vis1.js"></script>
         </div>
+    
+
+        <div class="pure-g"> 
+            <div id="scatter_plot" , class="pure-u-1-2">
+                <script src="js/scatter_plot.js"></script>
+            </div>
+            <div class="pure-u-1-2">
+                <p class="text-container">
+                    In order to reach NZE by 2050, worldwide action is needed to reduce carbon emissions and slow global warming. Although the effects of global warming is felt across the world,
+                    some countries release significanty more emissions than others. So <b>which countries are responsible</b> for releasing the most amount of carbon emissions? 
+                    The top emitter in the world is <span class="colour-text">China</span>, followed by <span class="colour-text">United States</span> and <span class="colour-text">India</span>.
+                    Contrary to expectations, rich countries with high GDP per capita do not necessarily release more emissions.
+                    In the left scatter plot, LEDC countries are coloured in <span class="LEDC-text">light green dots</span> and MEDC countries are coloured in <span class="MEDC-text">darker green dots</span> 
+                    <i>(based on a threshold earning of $10,000/capita GDP).</i>
+                    Most <span class="MEDC-text">MEDC</span> countries consume more than <b>40,000 TWh of energy per person in a year</b>. Within  <span class="MEDC-text">MEDC</span> countries, <span class="colour-text">China</span> is the highest emitter releasing more than <b>10 million metric tonnes CO2/person per year</b>.
+                </p>
+            </div>
+        </div>
+
+        
+        <div class="pure-g"> 
+            <h2 class="pure-u-1", id="c-align", style="font-size: 40px"> 
+                A Snapshot of Energy in Australia 
+            </h2>
+            <div class="pure-u-1-2">
+                <p class="text-container">
+                    Australia has one of the <b>top ranking</b> carbon emissions per capita, 
+                    and traditionally has relied on fossil fuels for its energy. 
+                    In recent years, there has been an increased uptake of renewables in the country, 
+                    with around <b>11%</b> of energy sourced from solar, wind or other forms
+                    of renewable energy in Australia. 
+                </p>
+            </div>
+            <div class="pure-u-1-2">
+                <p class="text-container">
+                    In Australia, <b>fossil fuels</b> still make up the majority of electricity generation compared to renewables. 
+                    However, electricity generation from fossil fuels has slowly decreased with 
+                    <a href= "https://www.canberratimes.com.au/story/8380609/three-quarters-of-aussie-coal-mining-jobs-to-go-by-2050/#:~:text=%22Coal%20mine%20closures%20are%20inevitable,including%20three%2Dquarters%20of%20Australia's.">
+                        planned closures of almost all coal mines in the country.</a>
+                    <i>Click on the legend to see the graph filtered on electricity source.</i>
+                </p>
+            </div>
+        </div>
+
+        <div class="pure-g"> 
+            <div class="pure-u-1-2" , id="area_chart">
+                <script src="js/area_chart.js"></script>
+            </div>
+            <div class="pure-u-1-2" , id="bar_chart">
+                <script src="js/bar_chart.js"></script>
+            </div>
+        </div>  
     </div>
 
-    <div class="pure-g"> 
-        <div id="scatter_plot" , class="pure-u-1-2">
-            <script src="js/scatter_plot.js"></script>
-        </div>
-        <div class="pure-u-1-2">
-            <p class="text-container">
-                So which countries are responsible for releasing the most amount of carbon emissions? 
-                The top emitter in the world is China, followed by United States and India.
-            </p>
-        </div>
+    <div>
+        <p class="text-container" , id="light-text">
+            <i>This visualisation was made by Beian (Annie) Mao. Data sourced from
+                <a
+                    href="https://www.kaggle.com/datasets/anshtanwar/global-data-on-sustainable-energy?select=global-data-on-sustainable-energy+%281%29.csv">
+                    Kaggle
+                </a>
+                .
+            </i>
+        </p>
     </div>
-
-    <div class="pure-g"> 
-        <h2 class="pure-u-1"> A Snapshot of Energy in Australia </h2>
-        <div class="pure-u-1-3" , id="area_chart">
-            <script src="js/area_chart.js"></script>
-        </div>
-        <div class="pure-u-1-3">
-            <p>
-                Australia has one of the top ranking carbon emissions per capita, 
-                and traditionally has relied on fossil fuels for its energy. 
-                In recent years however, there has been an increased speed in the adoption of renewables, 
-                with around 11% of energy sourced from solar, wind or other forms
-                of renewable energy in Australia.
-            </p>
-        </div>
-        <div class="pure-u-1-3" , id="bar_chart">
-            <script src="js/bar_chart.js"></script>
-        </div>
-    </div>  
-
 
 </body>
 
